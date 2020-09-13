@@ -28,19 +28,18 @@ function UdpSwitch(log, config) {
     const server = dgram.createSocket("udp4");
 
     server.on("error", (err) => {
-        console.log(`UdpSwitch error:\n${err.stack}`);
+        this.log(`UdpSwitch error:\n${err.stack}`);
         server.close();
     });
 
     server.on("message", (msg, rinfo) => {
-        console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
         this.onStatus = !this.onStatus;
         this._service.setCharacteristic(Characteristic.On, this.onStatus);
     });
 
     server.on("listening", () => {
         const address = server.address();
-        console.log(`server listening ${address.address}:${address.port}`);
+        this.log(`server listening  on port ${address.port}`);
     });
 
     server.bind(this.port);
