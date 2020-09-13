@@ -46,11 +46,11 @@ function UdpSwitch(log, config) {
     server.bind(this.port);
 }
 
-HttpSwitch.prototype.getServices = function () {
+UdpSwitch.prototype.getServices = function () {
     return [this._service];
 };
 
-HttpSwitch.prototype._setOn = function (on, callback) {
+UdpSwitch.prototype._setOn = function (on, callback) {
     this.log("Setting switch to " + on);
 
     callback();
