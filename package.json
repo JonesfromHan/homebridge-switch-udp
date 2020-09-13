@@ -1,0 +1,21 @@
+{
+    "name": "homebridge-switch-udp",
+    "version": "1.0.2",
+    "description": "",
+    "license": "ISC",
+    "keywords": [
+        "homebridge-plugin"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/JonesfromHan/homebridge-switch-http.git"
+    },
+    "bugs": {
+        "url": "http://github.com/JonesfromHan/homebridge-switch-http/issues"
+    },
+    "dependencies": {},
+    "engines": {
+        "node": ">=0.12.0",
+        "homebridge": ">=0.2.0"
+    }
+}
